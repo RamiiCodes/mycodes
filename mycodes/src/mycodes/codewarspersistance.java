@@ -1,4 +1,4 @@
-
+package mycodes;
 public class codewarspersistance {
 	 public static int findIt(int[] a) {
 	        int i;

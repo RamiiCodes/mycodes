@@ -1,5 +1,5 @@
-package mycodes;
-public class findIt {
+
+public class codewarspersistance {
 	 public static int findIt(int[] a) {
 	        int i;
 	        for (i = 0; i < a.length; i++) {
@@ -13,7 +13,6 @@ public class findIt {
 	        }
 	        return -1;
 		  }
-
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 

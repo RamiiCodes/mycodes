@@ -1,4 +1,4 @@
-package mycodes;
+
 public class CDEncode {
 	static String encode(String word){
 	    String str ="";

@@ -2,6 +2,10 @@ package mycodes;
 import java.util.ArrayList;
 import java.util.List;
 
+
+import java.util.ArrayList;
+import java.util.List;
+
 public class CDSumDigitPower {
 	
     public static List<Long> sumDigPow(long a, long b) {

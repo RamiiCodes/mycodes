@@ -1,4 +1,4 @@
-package mycodes;
+
 public class codewarsaccum {
 	
 	public static String accum(String s) {
