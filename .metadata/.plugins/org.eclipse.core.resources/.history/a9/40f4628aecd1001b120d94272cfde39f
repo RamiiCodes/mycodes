@@ -1,0 +1,17 @@
+package mycodes;
+
+import java.util.Arrays;
+
+public class CDsum {
+	 public static int[] twoSum(int[] numbers, int target)
+	    {
+		 Arrays.sort(numbers);
+		 System.out.println(numbers);
+	        return null; // Do your magic!
+	    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		
+	}
+
+}
