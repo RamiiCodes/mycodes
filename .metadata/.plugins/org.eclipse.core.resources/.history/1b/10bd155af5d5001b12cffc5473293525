@@ -10,17 +10,21 @@ public class CDTwiceLiniar {
         SortedSet<Integer> u = new TreeSet<>();
         u.add(1);
         for (int i = 0; i < n; i++) {
-            int getfirst = u.first();
-            u.add(getfirst * 2 + 1);
-            u.add(getfirst * 3 + 1);
-            u.remove(getfirst);
-           
+            int x = u.first();
+            System.out.println(x);
+            u.add(x * 2 + 1);
+            u.add(x * 3 + 1);
+            System.out.println(u);
+            u.remove(x);
+            System.out.println(u);
         }
+        //System.out.println(u.size());
         return u.first();
 	}
 
 	public static void main(String[] args) {
-
+		// TODO Auto-generated method stub
+		//ldb_linear(20);
 		System.out.println(ldb_linear(10));
 
 	}
