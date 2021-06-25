@@ -1,0 +1,59 @@
+package mycodes;
+
+import java.util.HashMap;
+import java.util.Map;
+
+public class CDpositionAverage {	
+public static double posAverage(String s) {
+	  double count =0;
+	    double countlimit =0;
+
+	    String [] res = s.split(",");
+	    double total = ((res[0].length() * (res[0].length() )) / 2);
+	    System.out.println(total);
+
+	    String [] compare = new String[res.length];
+	    for (int i =0;i< res.length;i++)
+	    {
+	        compare[i]=res[i]; //i=0 ==> compare = 6900690040 // i=2
+	        for (int j=i+1;j<res.length ;j++) //j =2 // j=3
+	        {
+	            for (int k=0;k<res[i].length();k++)
+	            {
+	            if (compare[i].charAt(k) == res[j].charAt(k))  count ++; // 6900690040 == 9990494604
+	        }
+	        }
+	    }
+
+	    for (int i=0;i< res[0].length();i++) //i=0
+	    {
+	        if (res[0].charAt(i) == res[res.length-1].charAt(i)) countlimit ++; // 6900690040 == 9990494604
+
+	    }
+	    return ((( (count+countlimit))) / (total+count+countlimit) );
+}
+
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(posAverage("6900690040, 4690606946, 9990494604"));
+		//System.out.println(posAverage("444996, 699990, 666690, 096904, 600644, 640646, 606469, 409694, 666094, 606490"));
+		//System.out.println(posAverage("466960, 069060, 494940, 060069, 060090, 640009, 496464, 606900, 004000, 944096"));
+		//test("466960, 069060, 494940, 060069, 060090");
+	}
+
+}
+/*Given string s = "444996, 699990, 666690, 096904, 600644, 640646, 606469, 409694, 666094, 606490" 
+ * composing a set of n = 10 substrings (hence 45 combinations), pos_average returns 29.2592592593
+ * 
+ * s1 = "6900690040"
+s2 = "4690606946"
+s3 = "9990494604"
+
+ * Given n substrings (n >= 2) in a string s our
+ *  function pos_average will calculate the average percentage of positions
+ *   that are the same between the (n * (n-1)) / 2 sets of substrings taken 
+ *   amongst the given n substrings. It can happen that some substrings are 
+ *   duplicate but since their ranks are not the same in s they are considered 
+ *   as different substring
+ */

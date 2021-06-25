@@ -1,0 +1,18 @@
+package mycodes;
+
+public class CDTwiceLiniar {
+	public static int ldb_linear(int n)
+	{
+		int [] tab = {1};
+		System.out.println(tab.toString());
+		
+		return 0;
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		ldb_linear(4);
+
+	}
+
+}
