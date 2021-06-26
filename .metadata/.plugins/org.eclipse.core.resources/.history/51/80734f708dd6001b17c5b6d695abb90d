@@ -1,0 +1,35 @@
+package mycodes;
+
+public class CDoutlier {
+	
+	public static int outlier (int [] numbers)
+	{
+		int oddnum =0;
+		int evennum =0;
+		int odd =0 ; 
+		int even = 0 ; 
+		
+//		while (odd != 1 && even != 1)
+//		{
+//			
+//		}
+		for (int i =0; i<numbers.length;i++)
+		{
+			if (numbers[i] % 2 == 0 ) {even ++ ; evennum = numbers[i]; } 
+			if (numbers[i] % 2 != 0 ) {odd ++ ; oddnum = numbers[i] ;}
+			
+		}
+		
+		if ( odd == 1 ) return oddnum ;
+		else return evennum ; 
+		
+		
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] exampleTest1 = {2,6,8,-10,3}; 
+		System.out.println(outlier(exampleTest1));
+	}
+
+}

@@ -1,0 +1,22 @@
+package mycodes;
+
+public class CDoutlier {
+	
+	public static int outlier (int [] numbers)
+	{
+		int out = 0; 
+		for (int i =0; i<numbers.length;i++)
+		{
+			if (numbers[i] % 2 == 0) { out = numbers[i]; break ;}
+			if (numbers[i] % 2 != 0) { out = numbers[i]; break ;}
+		}
+		return out ; 
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		int[] exampleTest1 = {2,6,8,-10,3}; 
+		System.out.println(outlier(exampleTest1));
+	}
+
+}
