@@ -1,0 +1,29 @@
+package mycodes;
+
+import java.util.ArrayList;
+import java.util.List;
+
+public class CDWords {
+	 public static String order(String words) {
+		    String [] tab = words.split(" ");
+		    int count =0;
+		    List<String> sb = new ArrayList<>();
+		    for (int i =0; i<tab.length;i++)
+		    {
+		    char[] chars = tab[i].toCharArray();
+		    for(char c : chars){
+		    	count ++;
+		         if(Character.isDigit(c)){
+		        	sb.add(count, tab[i]); }
+		         }
+		    }
+		    return sb.toString();
+		  }
+	 
+
+	public static void main(String[] args) {
+		System.out.println(order("is2 Thi1s T4est 3a"));
+
+	}
+
+}

@@ -1,0 +1,41 @@
+package mycodes;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class CDWords {
+	 public static String order(String words) {
+		    String [] tab = words.split(" ");
+		    int count =0;
+		    //int numStr =0;
+		    List<String> sb = new ArrayList<>();
+		    for (int i =0; i<tab.length;i++)
+		    {	int numStr =0;
+
+		    	for (int j = 0; j < tab[i].length(); j++) {
+		            char charCheck =  tab[i].charAt(j);
+		            System.out.println(charCheck);
+		            if(Character.isDigit(charCheck)) {
+		            	System.out.println(charCheck);
+		                numStr = charCheck;
+		                System.out.println(numStr);
+		                break;
+		            }
+		            System.out.println(numStr);
+		        }
+		    	
+		    	sb.add(numStr, tab[i]);
+
+		    }
+		    return sb.toString();
+		  }
+	 
+
+	public static void main(String[] args) {
+		System.out.println(order("is2 Thi1s T4est 3a"));
+
+	}
+
+}
