@@ -1,0 +1,64 @@
+package mycodes;
+
+import java.util.*;
+
+
+public class CDStepsPrimes {
+	
+//	public static long[] step(int g, long m, long n) {
+//		long [] t = new long [(int)m] ; 
+//		long [] res = new long [2];
+//		int k = 0 ;
+//       for (long i = m; i<=n;i++)
+//       {    	  
+//    	   int count = 0; 
+//    	   for (long j = 1; j<=i;j++)
+//    	   {
+//    		   if (i%j == 0) count ++ ;     		   
+//    	   }
+//    	   if (count == 2 ) {t[k] = i; k ++ ; }       	  
+//       }          
+//      label1:
+//       for (int i = 0; i<t.length -1 ;i++)
+//       { 
+//    	   for (int j = 1; j<t.length -1 ;j++) {	   
+//    	   if (t[j] - t[i] == g ) { res[0] = t[i]; res[1] = t[j]; break label1;}
+//       }
+//       }
+//       
+//       return res;
+//    }
+	public static long[] step(int g, long m, long n) {
+		SortedSet<Long> tab = new TreeSet<>();
+		long [] t = new long [2] ; 
+		label1:
+       for (long i = m; i<=n;i++)
+       {    	  
+    	   int count = 0; 
+    	   for (long j = 1; j<=i;j++)
+    	   {
+    		   if (i%j == 0) count ++ ;     		   
+    	   }
+    	   if (count == 2 ) { tab.add(i); 
+    	   
+    	   Object[] arr = tab.toArray();
+    	      label1:
+    	       for (int k = 0; k<tab.size()-1;k++)
+    	       { 
+    	    	   for (int l = 1; l<tab.size()-1;l++) {	   
+    	    	   if ((long)arr[l] - (long)arr[k] == g ) { t[0] = (long)arr[k]; t[1] = (long)arr[l]; break label1;}
+    	       }
+    	       }
+    	   }    	   
+       }      
+      
+       
+       return t;
+    }
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(Arrays.toString(step(500,100,1100000000)));
+	}
+
+}
