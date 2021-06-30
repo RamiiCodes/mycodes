@@ -1,0 +1,20 @@
+package mycodes;
+
+import java.util.regex.Pattern;
+
+public class CDCamelCase {
+	static String toCamelCase(String s){
+	
+		String pattern = "_-*\\[)(\\d+)(\\])";
+		Pattern regc = Pattern.compile(pattern);
+		Matcher matcher = regc.matcher(tomatch);
+		
+	    return str.toString();
+	}
+	public static void main(String[] args) {
+		
+		toCamelCase("the_Stealth-Warrior");
+
+	}
+
+}

@@ -1,0 +1,21 @@
+package mycodes;
+
+import java.util.*;
+import java.util.stream.IntStream;
+
+
+public class CDCountDuplicates {
+	
+	public static String count (String str)
+	{
+		return IntStream.range(str.charAt(0), str.charAt(str.length())).sorted().toString();
+	
+	}
+
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		System.out.println(count("hdje4dke"));
+
+	}
+
+}

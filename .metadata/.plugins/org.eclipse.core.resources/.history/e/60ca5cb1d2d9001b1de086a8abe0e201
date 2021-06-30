@@ -1,0 +1,17 @@
+package mycodes;
+
+public class CDCamelCase {
+	static String toCamelCase(String s){
+	
+		String pattern = "_-*\\[)(\\d+)(\\])";
+		Pattern regc = Pattern.compile(pattern);
+		
+	    return str.toString();
+	}
+	public static void main(String[] args) {
+		
+		toCamelCase("the_Stealth-Warrior");
+
+	}
+
+}

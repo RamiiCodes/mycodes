@@ -1,0 +1,14 @@
+package mycodes;
+
+public class CDCamelCase {
+	static String toCamelCase(String s){
+		String [] str = s.split("_&&-");
+	    return str.toString();
+	}
+	public static void main(String[] args) {
+		
+		System.out.println(toCamelCase("the_Stealth-Warrior"));
+
+	}
+
+}

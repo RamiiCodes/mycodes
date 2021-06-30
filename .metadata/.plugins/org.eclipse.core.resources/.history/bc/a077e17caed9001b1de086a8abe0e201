@@ -1,0 +1,26 @@
+package mycodes;
+
+public class CDVasyaClerk {
+	
+	public static String Tickets(int[] peopleInLine)
+	  {
+		int sum = 0;
+	        for (int i = 0; i<peopleInLine.length -1 ;i++)
+	        {
+	        	sum += peopleInLine[i];
+	        }
+	        
+	        if (peopleInLine[peopleInLine.length] - sum == 25) return "YES" ;
+	        return "NO" ;
+	        
+	  }
+	
+	
+	public static void main(String[] args) {
+
+		int [] tab = {25, 25, 50};
+		System.out.println(Tickets(tab));
+
+	}
+
+}

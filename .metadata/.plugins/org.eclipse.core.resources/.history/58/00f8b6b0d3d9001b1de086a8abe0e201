@@ -1,0 +1,26 @@
+package mycodes;
+
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
+
+public class CDCamelCase {
+	
+	static public String splt (String str)
+	{
+		String [] tab = str.split("-");
+		return tab.toString();
+		 
+	}
+	static String toCamelCase(String s){
+	
+		
+	    return " " ;
+	}
+	public static void main(String[] args) {
+		
+		toCamelCase("the_Stealth-Warrior");
+	
+
+	}
+
+}
